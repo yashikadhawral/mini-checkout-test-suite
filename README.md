@@ -4,6 +4,8 @@ Submission for the Fynd Hiring Hackathon, SDET Intern challenge: **"Mini Checkou
 
 A single-page checkout with two synthetic products, plus a Playwright browser test suite, a test plan and the test results.
 
+**Live demo:** https://yashikadhawral.github.io/mini-checkout-test-suite/ (deployed from `src/` by [`.github/workflows/pages.yml`](.github/workflows/pages.yml) on every push to `main`)
+
 | What | Where |
 | ---- | ----- |
 | Checkout page (HTML/CSS/vanilla JS, no build step) | [`src/`](src) |
