@@ -1,0 +1,23 @@
+
+Running 18 tests using 1 worker
+
+  ok  1 [chromium] › tests\checkout.spec.js:16:3 › Checkout: required checks › TC-01 successful checkout shows one confirmation with a reference (1.5s)
+  ok  2 [chromium] › tests\checkout.spec.js:41:3 › Checkout: required checks › TC-02 blank name blocks checkout, shows a message and keeps the cart (1.5s)
+  ok  3 [chromium] › tests\checkout.spec.js:75:3 › Checkout: required checks › TC-03 changing a quantity updates line totals and the exact order total (475ms)
+  ok  4 [chromium] › tests\regression.spec.js:19:3 › Checkout: regression checks › TC-04 empty cart blocks checkout and keeps the entered name (400ms)
+  ok  5 [chromium] › tests\regression.spec.js:37:3 › Checkout: regression checks › TC-05 empty cart and blank name report both problems at once (308ms)
+  ok  6 [chromium] › tests\regression.spec.js:46:3 › Checkout: regression checks › TC-06 double-clicking Place order creates exactly one order (457ms)
+  ok  7 [chromium] › tests\regression.spec.js:71:3 › Checkout: regression checks › TC-07 two clicks in the same tick and repeated Enter still create one order (390ms)
+  ok  8 [chromium] › tests\regression.spec.js:89:3 › Checkout: regression checks › TC-08 cart cannot be edited while the order is processing (423ms)
+  ok  9 [chromium] › tests\regression.spec.js:103:5 › Checkout: regression checks › TC-09 invalid quantity "0" is flagged and blocks checkout (507ms)
+  ok 10 [chromium] › tests\regression.spec.js:103:5 › Checkout: regression checks › TC-09 invalid quantity "-1" is flagged and blocks checkout (522ms)
+  ok 11 [chromium] › tests\regression.spec.js:103:5 › Checkout: regression checks › TC-09 invalid quantity "1.5" is flagged and blocks checkout (507ms)
+  ok 12 [chromium] › tests\regression.spec.js:103:5 › Checkout: regression checks › TC-09 invalid quantity "11" is flagged and blocks checkout (577ms)
+  ok 13 [chromium] › tests\regression.spec.js:103:5 › Checkout: regression checks › TC-09 invalid quantity "abc" is flagged and blocks checkout (623ms)
+  ok 14 [chromium] › tests\regression.spec.js:103:5 › Checkout: regression checks › TC-09 invalid quantity "" is flagged and blocks checkout (568ms)
+  ok 15 [chromium] › tests\regression.spec.js:130:3 › Checkout: regression checks › TC-10 removing items updates totals and returns to the empty state (519ms)
+  ok 16 [chromium] › tests\regression.spec.js:145:3 › Checkout: regression checks › TC-11 quantity stops at 10 and minus stops at 1 (510ms)
+  ok 17 [chromium] › tests\regression.spec.js:157:3 › Checkout: regression checks › TC-13 (D-01) on a 375px phone the whole cart line fits without sideways scrolling (405ms)
+  ok 18 [chromium] › tests\regression.spec.js:169:3 › Checkout: regression checks › TC-12 starting a new order resets to a clean state (500ms)
+
+  18 passed (11.8s)

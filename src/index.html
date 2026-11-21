@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Checkout</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Mini Store Checkout</h1>
+      <p class="muted">Synthetic demo store. No payment is taken.</p>
+    </header>
+
+    <main id="app" data-ready="false">
+      <section aria-labelledby="products-heading" id="products">
+        <h2 id="products-heading">Products</h2>
+        <ul class="product-list" data-testid="product-list"></ul>
+      </section>
+
+      <section aria-labelledby="cart-heading" id="cart">
+        <h2 id="cart-heading">Your cart</h2>
+        <p class="muted" data-testid="cart-empty">Your cart is empty.</p>
+        <div class="cart-table-wrap">
+          <table class="cart-table" data-testid="cart-table" hidden>
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col" class="num">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col" class="num">Line total</th>
+                <th scope="col"><span class="visually-hidden">Remove</span></th>
+              </tr>
+            </thead>
+            <tbody data-testid="cart-lines"></tbody>
+          </table>
+        </div>
+        <p class="cart-notice" data-testid="cart-notice" role="status" aria-live="polite"></p>
+        <dl class="summary">
+          <div>
+            <dt>Items</dt>
+            <dd data-testid="item-count">0</dd>
+          </div>
+          <div class="summary-total">
+            <dt>Order total</dt>
+            <dd><output data-testid="order-total" aria-live="polite">₹0.00</output></dd>
+          </div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="checkout-heading" id="checkout">
+        <h2 id="checkout-heading">Checkout</h2>
+        <div class="error-summary" data-testid="error-summary" role="alert" hidden>
+          <p class="error-summary-title">We couldn't place your order:</p>
+          <ul data-testid="error-list"></ul>
+        </div>
+        <form id="checkout-form" novalidate>
+          <div class="field">
+            <label for="customer-name">Full name <span aria-hidden="true">*</span><span class="visually-hidden">(required)</span></label>
+            <input
+              id="customer-name"
+              name="customerName"
+              type="text"
+              autocomplete="name"
+              maxlength="60"
+              required
+              aria-describedby="customer-name-error"
+            />
+            <p class="field-error" id="customer-name-error" data-testid="name-error" hidden></p>
+          </div>
+          <button type="submit" class="primary" data-testid="place-order">Place order</button>
+        </form>
+      </section>
+
+      <section aria-labelledby="confirmation-heading" id="confirmation" data-testid="confirmation" tabindex="-1" hidden>
+        <h2 id="confirmation-heading">Order confirmed</h2>
+        <p>Thank you, <strong data-testid="confirmation-name"></strong>. Your order has been placed.</p>
+        <p>Order reference: <strong class="reference" data-testid="order-reference"></strong></p>
+        <ul class="confirmation-lines" data-testid="confirmation-lines"></ul>
+        <p>Order total: <strong data-testid="confirmation-total"></strong></p>
+        <button type="button" data-testid="new-order">Start a new order</button>
+      </section>
+    </main>
+  </body>
+</html>

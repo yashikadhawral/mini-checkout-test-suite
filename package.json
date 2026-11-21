@@ -1,0 +1,17 @@
+{
+  "name": "mini-checkout",
+  "version": "1.0.0",
+  "description": "Single-page checkout with a Playwright browser test suite (Fynd Hiring Hackathon, SDET intern challenge)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "playwright test --grep-invert @evidence",
+    "test:headed": "playwright test --grep-invert @evidence --headed",
+    "test:report": "playwright show-report",
+    "evidence": "playwright test --grep @evidence"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1"
+  }
+}
